@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:miserviciowsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:miserviciowsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:miserviciowsdl">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="encriptarRequest">
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="encriptarResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarRequest">
+    <wsdl:part name="passwordEncriptado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="criptografiaServicePortType">
+    <wsdl:operation name="encriptar">
+      <wsdl:input message="tns:encriptarRequest" />
+      <wsdl:output message="tns:encriptarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <wsdl:input message="tns:desencriptarRequest" />
+      <wsdl:output message="tns:desencriptarResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="criptografiaServiceBinding" type="tns:criptografiaServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="encriptar">
+      <soap:operation soapAction="http://atc.mx/WebService/Aplicacion de escritorio/seguridad/seguridad.php/encriptar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:miserviciowsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:miserviciowsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <soap:operation soapAction="http://atc.mx/WebService/Aplicacion de escritorio/seguridad/seguridad.php/desencriptar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:miserviciowsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:miserviciowsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="criptografiaService">
+    <wsdl:port name="criptografiaServicePort" binding="tns:criptografiaServiceBinding">
+      <soap:address location="http://atc.mx/WebService/Aplicacion de escritorio/seguridad/seguridad.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

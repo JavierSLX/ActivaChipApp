@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DABAE6DC-1F64-443F-971B-67E343342609}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AutomatizacionRecargasATC.My.MyApplication</StartupObject>
+    <RootNamespace>AutomatizacionRecargasATC</RootNamespace>
+    <AssemblyName>AutomatizacionRecargasATC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AutomatizacionRecargasATC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AutomatizacionRecargasATC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDatosDll.vb" />
+    <Compile Include="ComportamientoRecargasDlg.Designer.vb">
+      <DependentUpon>ComportamientoRecargasDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComportamientoRecargasDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRestaurarCarrierDlg.Designer.vb">
+      <DependentUpon>EliminarRestaurarCarrierDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRestaurarCarrierDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRestaurarCliente.Designer.vb">
+      <DependentUpon>EliminarRestaurarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRestaurarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRestaurarPuntoVenta.Designer.vb">
+      <DependentUpon>EliminarRestaurarPuntoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRestaurarPuntoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRestaurarSociosDlg.Designer.vb">
+      <DependentUpon>EliminarRestaurarSociosDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRestaurarSociosDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRestaurarUsuariosDlg.Designer.vb">
+      <DependentUpon>EliminarRestaurarUsuariosDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRestaurarUsuariosDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeRecargasDlg.Designer.vb">
+      <DependentUpon>InformeRecargasDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InformeRecargasDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeerArchivosDll.vb" />
+    <Compile Include="LoginDlg.Designer.vb">
+      <DependentUpon>LoginDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MontoRecargaDlg.Designer.vb">
+      <DependentUpon>MontoRecargaDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MontoRecargaDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegistroFoliosDlg.Designer.vb">
+      <DependentUpon>RegistroFoliosDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFoliosDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeguridadDll.vb" />
+    <Compile Include="VisualizarCarriersDlg.Designer.vb">
+      <DependentUpon>VisualizarCarriersDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarCarriersDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarClientesDlg.Designer.vb">
+      <DependentUpon>VisualizarClientesDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarClientesDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPuntoVentaDlg.Designer.vb">
+      <DependentUpon>VisualizarPuntoVentaDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPuntoVentaDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarSociosDlg.Designer.vb">
+      <DependentUpon>VisualizarSociosDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarSociosDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarUsuariosDlg.Designer.vb">
+      <DependentUpon>VisualizarUsuariosDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarUsuariosDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web References\mx.atc\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\seguridadService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComportamientoRecargasDlg.resx">
+      <DependentUpon>ComportamientoRecargasDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRestaurarCarrierDlg.resx">
+      <DependentUpon>EliminarRestaurarCarrierDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRestaurarCliente.resx">
+      <DependentUpon>EliminarRestaurarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRestaurarPuntoVenta.resx">
+      <DependentUpon>EliminarRestaurarPuntoVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRestaurarSociosDlg.resx">
+      <DependentUpon>EliminarRestaurarSociosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRestaurarUsuariosDlg.resx">
+      <DependentUpon>EliminarRestaurarUsuariosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeRecargasDlg.resx">
+      <DependentUpon>InformeRecargasDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDlg.resx">
+      <DependentUpon>LoginDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MontoRecargaDlg.resx">
+      <DependentUpon>MontoRecargaDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFoliosDlg.resx">
+      <DependentUpon>RegistroFoliosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarCarriersDlg.resx">
+      <DependentUpon>VisualizarCarriersDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarClientesDlg.resx">
+      <DependentUpon>VisualizarClientesDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPuntoVentaDlg.resx">
+      <DependentUpon>VisualizarPuntoVentaDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarSociosDlg.resx">
+      <DependentUpon>VisualizarSociosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarUsuariosDlg.resx">
+      <DependentUpon>VisualizarUsuariosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Web References\mx.atc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\mx.atc\seguridad.wsdl" />
+    <None Include="Web References\seguridadService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\seguridadService\seguridad.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://atc.mx/WebService/Aplicacion%2520de%2520escritorio/seguridad/seguridad.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\mx.atc\</RelPath>
+      <UpdateFromURL>http://atc.mx/WebService/Aplicacion%2520de%2520escritorio/seguridad/seguridad.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AutomatizacionRecargasATC_mx_atc_criptografiaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/seguridad/seguridad.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\seguridadService\</RelPath>
+      <UpdateFromURL>http://localhost/seguridad/seguridad.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AutomatizacionRecargasATC_seguridadService_criptografiaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\aceptar.ico" />
+    <Content Include="Imagenes\agregar.ico" />
+    <Content Include="Imagenes\atc.ico" />
+    <Content Include="Imagenes\atc.jpg" />
+    <Content Include="Imagenes\atc.png" />
+    <None Include="Imagenes\imprimir.ico" />
+    <None Include="Imagenes\eliminar.ico" />
+    <None Include="Imagenes\cargar.ico" />
+    <None Include="Imagenes\guardar.ico" />
+    <None Include="Resources\guardar.ico" />
+    <None Include="Resources\diskette_save_saveas_1514.ico" />
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
