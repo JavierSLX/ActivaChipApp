@@ -20,7 +20,7 @@ CREATE TABLE acceso_empresa
     clave_operador VARCHAR(100) NOT NULL,
     empresa_id INT UNSIGNED NOT NULL REFERENCES empresa.id ON UPDATE CASCADE
 );
-INSERT INTO acceso_empresa(wsdl, usuario, pass, clave_operador, empresa_id) VALUES ('http://test.xtremecard.com.mx:8081/hub/Listener?WSDL', 'MARQUESADA', '123456', 'Ma12', 1);
+INSERT INTO acceso_empresa(wsdl, usuario, pass, clave_operador, empresa_id) VALUES ('https://tae.xtremecard.com.mx/hub/Listener?wsdl', 'MARQUESADA', '123456', 'Ma12', 1);
 
 CREATE TABLE administrador
 (	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,

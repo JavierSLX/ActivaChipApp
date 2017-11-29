@@ -57,8 +57,10 @@ $datosUsuario=$sesion->datosUsuario();
       <ul id="nav" >
           <li><a href="recarga">Inicio</a></li>
           <li ><a href="reporte">Reporte</a></li>
-            <li ><a href="caducidad">Caducidad</a></li>
-            <li class="active"><a href="cambioPassword">Cuenta</a></li>
+            <?php if ($permisoID == 2) {
+            echo '<li ><a href="caducidad">Caducidad</a></li>';
+            } ?>
+            <li class="active"><a href="">Cuenta</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
 

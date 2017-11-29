@@ -20,8 +20,7 @@ if (isset($_POST["nick"]))
 		$permisoID = 1;
 		$usuarioID = $resultado[0];
 		$sesion->inicioLogin($usuario,$passencriptado);
-		echo "<script language=\"JavaScript\">alert('Bienvenido administrador: $usuario.');</script>";
-        header("location:recarga");
+		echo "<script language=\"JavaScript\">alert('Bienvenido administrador: $usuario.'); location.href='recarga.php';</script>";
 	}
 	else
 	{

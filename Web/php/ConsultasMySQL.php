@@ -1,10 +1,12 @@
 ﻿<?php
+error_reporting(0);
 	$db = new mysqli('localhost', 'root', '', 'recargasatc');
 
 	if ($db->connect_error) 
 	{
-		die('No autorizado (' . $db->connect_errno . ') '
-			.$db->connect_error);
+
+		echo "<script language=\"JavaScript\">alert(\"Eror en la conexion de la base de datos (cMysql)\");</script>";
+		die();
 	}
 	
 	//Método que permite saber si un numero existe en la base de datos
@@ -199,9 +201,10 @@
 	//Funcion que saca los datos para el reporte
 	function Reporte($id, $fechainicio, $fechafin)
 	{
-		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad
-			from numero n, activado a, cliente c, carrier ca
+		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad,cl.nombre
+			from numero n, activado a, cliente c, carrier ca,cliente cl
 			where a.numero_id = n.id
+			and n.cliente_id = cl.id
 			and n.cliente_id = c.id
 			and n.carrier_id= ca.id
 			and c.id = '$id'
@@ -217,9 +220,10 @@
 	//Funcion que saca los datos para el reporte si es administrador
 	function reporteAdministrador($fechainicio, $fechafin)
 	{
-		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad
-			from numero n, activado a,carrier ca
+		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad,cl.nombre
+			from numero n, activado a,carrier ca,cliente cl
 			where a.numero_id = n.id
+			and n.cliente_id = cl.id
 			and n.carrier_id= ca.id
 			and DATE(a.fecha) >='$fechainicio'
 			AND DATE(a.fecha)<= '$fechafin' limit 50";

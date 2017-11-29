@@ -52,16 +52,14 @@ $datosUsuario=$sesion->datosUsuario();
       </style>
 </head>
 
-
-
 <body>
-<header>
-	<nav class = "navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
       <ul id="nav" >
-          <li class="active"><a href="recarga">Inicio</a></li>
+          <li class="active"><a href="">Inicio</a></li>
           <li ><a href="reporte">Reporte</a></li>
-            <li ><a href="caducidad">Caducidad</a></li>
+          <?php if ($permisoID == 2) {
+            echo '<li ><a href="caducidad">Caducidad</a></li>';
+          } ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
@@ -69,7 +67,6 @@ $datosUsuario=$sesion->datosUsuario();
             </ul>
       </ul>
   </div>
-</header>  
   <div id="loader" style="display: none;"></div>
   <div class="login-page">
   <div class="form">
@@ -88,7 +85,6 @@ $datosUsuario=$sesion->datosUsuario();
   </div>
 </div>
 
-    <script  src="js/index.js"></script>
 <script>
 $("#btn_enviar").click(function(){
   var url = "./php/procesoRecarga"; // El script a dónde se realizará la petición.
@@ -128,7 +124,9 @@ $("#btn_enviar").click(function(){
       success: function(data){
         $("#respuesta").html(data); // Mostrar la respuestas del script PHP.
           document.getElementById("loader").style.display="none";
+          
       }
+
   });
   return false; // Evitar ejecutar el submit del formulario.
 });
@@ -191,8 +189,6 @@ $(function(){
 Contacto: webmaster.atc.mx@gmail.com <br>
 Copyright© 2017-2018. Morpheus DSS
 </footer>
-</body>
-
 </html>
 <?php
 } else {

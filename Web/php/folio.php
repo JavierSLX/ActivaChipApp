@@ -2,7 +2,8 @@
 	//conexion a la base de Datos
     $db = new mysqli('localhost', 'root', '', 'recargasatc');
     if ($db->connect_error) {
-    die('No autorizado (' . $db->connect_errno . ')'. $db->connect_error);
+      echo "<script language=\"JavaScript\">alert(\"Eror en la conexion de la base de datos (f1)\");</script>";
+    die();
 }
 
 //sacar el ultimo folio
@@ -12,7 +13,8 @@
     $db = new mysqli('localhost', 'root', '', 'recargasatc');
     if ($db->connect_error) 
 	{
-		die('No autorizado (' . $db->connect_errno . ')'. $db->connect_error);
+    echo "<script language=\"JavaScript\">alert(\"Eror en la conexion de la base de datos (f2)\");</script>";
+		die();
 	}
 	
     $query = "SELECT folio FROM activado ORDER BY id DESC LIMIT 1;";

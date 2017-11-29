@@ -5,8 +5,8 @@ function checarNumero($numero)
 	
 	if ($db->connect_error) 
 	{
-	  die('No autorizado (' . $db->connect_errno . ') '
-			  . $db->connect_error);
+	 	echo "<script language=\"JavaScript\">alert(\"Eror en la conexion de base de datos (cN)\");</script>";
+		die();
 	}
 
 	$query = "SELECT id FROM numero WHERE digitos = '$numero'";

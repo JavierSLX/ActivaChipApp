@@ -31,8 +31,10 @@ $datosUsuario=$sesion->datosUsuario();
 	<div class="container">
       <ul id="nav" >
           <li ><a href="recarga">Inicio</a></li>
-          <li class="active"><a href=#s1>Reporte</a></li>
-            <li ><a href="caducidad">Caducidad</a></li>
+          <li class="active"><a href="">Reporte</a></li>
+            <?php if ($permisoID == 2) {
+            echo '<li ><a href="caducidad">Caducidad</a></li>';
+          	} ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
@@ -100,6 +102,7 @@ if (empty($fechaIn && $fechafi)){
     <th data-th="Driver details"><span>Número</span></th>
     <th>Fecha</th>
     <th>Monto</th>
+    <th>Cliente</th>
   </tr>
 				  <?php
 				  while ($row = mysqli_fetch_array($result)){
@@ -109,7 +112,7 @@ if (empty($fechaIn && $fechafi)){
 							echo "<td height = 10>"."   ".$row[1]."   "."</td>";
 							echo "<td height = 10>"."   ".$row[2]."   "."</td>";
 							echo "<td height = 10>"."$".$row[3]."   "."</td>";
-
+							echo "<td height = 10>"."   ".$row[4]."   "."</td>";
 							echo "</tr>";
 				  }
 
