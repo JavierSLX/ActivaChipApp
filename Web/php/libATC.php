@@ -1,0 +1,10 @@
+<?php
+	require("./xtremeLib.php");
+	require("./phpMailer.php");
+	require("./mysqlATC.php");
+	require("./errores.php");
+	require("./folio.php");
+	require("./comparacionFechas.php");
+	require("./ConsultasMySQL.php");
+	require("idProducto.php");
+?>

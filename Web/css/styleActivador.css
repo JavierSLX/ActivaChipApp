@@ -1,0 +1,71 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+}
+
+img {
+  width: 10%;
+  height: 150px;
+  text-align: center;
+
+}
+.naranja{
+text-align: center;
+font-size: 20px;
+background: #F83333;
+border-radius: 20px;
+border-color: #330000;
+}
+
+#div1{
+  margin-top: 20px;
+}
+
+body{
+  background: #FCFCFD;
+}
+
+#divsli{
+  margin-top: -10px;
+}
+
+.navbar{
+  background-color:#071A3C;
+}
+
+#sect1{
+background:#FCFCFD;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
+  border-radius: 12px;
+
+}
+#art3{
+margin-top: 20px;
+}
+
+#btn1{
+	text-align: left;
+}
+
+#sect2{
+  background: #C0EFFB;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  border: dashed;
+  border-radius: 8px;
+  ;
+}
+
+footer{
+  background:#071A3C;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  border: dashed;
+
+  border-color: #071A3C;
+}

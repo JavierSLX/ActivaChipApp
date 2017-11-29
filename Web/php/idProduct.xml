@@ -1,0 +1,897 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <S:Body>
+      <ns2:getProductsResponse xmlns:ns2="http://webservice/">
+         <listProducts>
+            <product>
+               <amount>0.0</amount>
+               <description>TEST 0</description>
+               <idProduct>100</idProduct>
+               <idProvider>0</idProvider>
+               <providerProduct>TESTRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>RECARGA TELCEL 10</description>
+               <idProduct>357</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>RECARGA TELCEL 20</description>
+               <idProduct>358</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>RECARGA TELCEL 30</description>
+               <idProduct>332</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>RECARGA TELCEL 50</description>
+               <idProduct>318</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>80</amount>
+               <description>RECARGA TELCEL 80</description>
+               <idProduct>380</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>RECARGA TELCEL 100</description>
+               <idProduct>285</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>RECARGA TELCEL 150</description>
+               <idProduct>360</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>RECARGA TELCEL 200</description>
+               <idProduct>286</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>RECARGA TELCEL 300</description>
+               <idProduct>287</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>RECARGA TELCEL 500</description>
+               <idProduct>288</idProduct>
+               <idProvider>1</idProvider>
+               <providerProduct>TELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>MOVISTAR 10</description>
+               <idProduct>160010</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>MOVISTAR 20</description>
+               <idProduct>160020</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>MOVISTAR 30</description>
+               <idProduct>160030</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>40</amount>
+               <description>MOVISTAR 40</description>
+               <idProduct>160040</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>MOVISTAR 50</description>
+               <idProduct>160050</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>60</amount>
+               <description>MOVISTAR 60</description>
+               <idProduct>160060</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>70</amount>
+               <description>MOVISTAR 70</description>
+               <idProduct>160070</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>80</amount>
+               <description>MOVISTAR 80</description>
+               <idProduct>160080</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>MOVISTAR 100</description>
+               <idProduct>160100</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>120</amount>
+               <description>MOVISTAR 120</description>
+               <idProduct>160120</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>MOVISTAR 150</description>
+               <idProduct>160150</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>MOVISTAR 200</description>
+               <idProduct>160200</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>250</amount>
+               <description>MOVISTAR 250</description>
+               <idProduct>160250</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>MOVISTAR 300</description>
+               <idProduct>160300</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>400</amount>
+               <description>MOVISTAR 400</description>
+               <idProduct>160400</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>MOVISTAR 500</description>
+               <idProduct>160500</idProduct>
+               <idProvider>16</idProvider>
+               <providerProduct>MOVISTAR</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>MAZ TIEMPO 10</description>
+               <idProduct>19010</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>MAZ TIEMPO 20</description>
+               <idProduct>19020</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>MAZ TIEMPO 30</description>
+               <idProduct>19030</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>MAZ TIEMPO 50</description>
+               <idProduct>19050</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>60</amount>
+               <description>MAZ TIEMPO 60</description>
+               <idProduct>19060</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>MAZ TIEMPO 100</description>
+               <idProduct>19100</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>120</amount>
+               <description>MAZ TIEMPO 120</description>
+               <idProduct>19120</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>MAZ TIEMPO 150</description>
+               <idProduct>19150</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>MAZ TIEMPO 200</description>
+               <idProduct>19200</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>MAZ TIEMPO 300</description>
+               <idProduct>19300</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>MAZ TIEMPO 500</description>
+               <idProduct>19500</idProduct>
+               <idProvider>19</idProvider>
+               <providerProduct>MAZTIEMPO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>5</amount>
+               <description>INTERNET 5</description>
+               <idProduct>21005</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>Amigo Sin Limite 20</description>
+               <idProduct>21021</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>INTERNET 20</description>
+               <idProduct>21020</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>Amigo Sin Limite 30</description>
+               <idProduct>21030</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>INTERNET 30</description>
+               <idProduct>21031</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>Amigo Sin Limite 50</description>
+               <idProduct>21050</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>INTERNET 50</description>
+               <idProduct>21051</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>80</amount>
+               <description>Amigo Sin Limite 80</description>
+               <idProduct>21080</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>Amigo Sin Limite 100</description>
+               <idProduct>21100</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>INTERNET 100</description>
+               <idProduct>21101</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>INTERNET 150</description>
+               <idProduct>21151</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>Amigo Sin Limite 150</description>
+               <idProduct>21150</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>INTERNET 200</description>
+               <idProduct>21201</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>Amigo Sin Limite 200</description>
+               <idProduct>21200</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>Amigo Sin Limite 300</description>
+               <idProduct>21300</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>INTERNET 300</description>
+               <idProduct>21301</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>Amigo Sin Limite 500</description>
+               <idProduct>21500</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>INTERNET 500</description>
+               <idProduct>21501</idProduct>
+               <idProvider>2</idProvider>
+               <providerProduct>SERVICIOSTELCEL</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>MAS RECARGA 10</description>
+               <idProduct>20010</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>MAS RECARGA 20</description>
+               <idProduct>20020</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>MAS RECARGA 30</description>
+               <idProduct>20030</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>MAS RECARGA 50</description>
+               <idProduct>20050</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>60</amount>
+               <description>MAS RECARGA 60</description>
+               <idProduct>20060</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>70</amount>
+               <description>MAS RECARGA 70</description>
+               <idProduct>20070</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>80</amount>
+               <description>MAS RECARGA 80</description>
+               <idProduct>20080</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>MAS RECARGA 100</description>
+               <idProduct>20100</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>120</amount>
+               <description>MAS RECARGA 120</description>
+               <idProduct>20120</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>MAS RECARGA 150</description>
+               <idProduct>20150</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>MAS RECARGA 200</description>
+               <idProduct>20200</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>250</amount>
+               <description>MAS RECARGA 250</description>
+               <idProduct>20250</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>MAS RECARGA 300</description>
+               <idProduct>20300</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>400</amount>
+               <description>MAS RECARGA 400</description>
+               <idProduct>20400</idProduct>
+               <idProvider>20</idProvider>
+               <providerProduct>MASRECARGA</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>CIERTO 10</description>
+               <idProduct>22010</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>CIERTO 20</description>
+               <idProduct>22020</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>CIERTO 30</description>
+               <idProduct>22030</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>CIERTO 50</description>
+               <idProduct>22050</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>CIERTO 100</description>
+               <idProduct>22100</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>CIERTO 200</description>
+               <idProduct>22200</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>CIERTO 500</description>
+               <idProduct>22500</idProduct>
+               <idProvider>22</idProvider>
+               <providerProduct>CIERTO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>ALO 10</description>
+               <idProduct>310</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>ALO 20</description>
+               <idProduct>320</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>ALO 30</description>
+               <idProduct>330</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>ALO 50</description>
+               <idProduct>350</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>ALO 100</description>
+               <idProduct>351</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>ALO 150</description>
+               <idProduct>352</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>ALO 200</description>
+               <idProduct>353</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>ALO 300</description>
+               <idProduct>354</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>ALO 500</description>
+               <idProduct>355</idProduct>
+               <idProvider>3</idProvider>
+               <providerProduct>ALO</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>10</amount>
+               <description>ATT / UNEFON 10</description>
+               <idProduct>40010</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>ATT / UNEFON 20</description>
+               <idProduct>40020</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>ATT / UNEFON 30</description>
+               <idProduct>40030</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>ATT / UNEFON 50</description>
+               <idProduct>40050</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>55</amount>
+               <description>ATT / UNEFON 55</description>
+               <idProduct>40055</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>70.0</amount>
+               <description>ATT / UNEFON 70</description>
+               <idProduct>40070</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>ATT / UNEFON 100</description>
+               <idProduct>40100</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>ATT / UNEFON 150</description>
+               <idProduct>40150</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>ATT / UNEFON 200</description>
+               <idProduct>40200</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>ATT / UNEFON 300</description>
+               <idProduct>40300</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>ATT / UNEFON 500</description>
+               <idProduct>40500</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>600</amount>
+               <description>ATT / UNEFON 600</description>
+               <idProduct>40600</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>800</amount>
+               <description>ATT / UNEFON 800</description>
+               <idProduct>40800</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>900</amount>
+               <description>ATT / UNEFON 900</description>
+               <idProduct>40900</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>1000</amount>
+               <description>ATT / UNEFON 1000</description>
+               <idProduct>41000</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>1200</amount>
+               <description>ATT / UNEFON 1200</description>
+               <idProduct>41200</idProduct>
+               <idProvider>4</idProvider>
+               <providerProduct>ATT/UNEFON</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>20</amount>
+               <description>VIRGIN 20</description>
+               <idProduct>9020</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>30</amount>
+               <description>VIRGIN 30</description>
+               <idProduct>9030</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>40</amount>
+               <description>VIRGIN 40</description>
+               <idProduct>9040</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>50</amount>
+               <description>VIRGIN 50</description>
+               <idProduct>9050</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>100</amount>
+               <description>VIRGIN 100</description>
+               <idProduct>9100</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>150</amount>
+               <description>VIRGIN 150</description>
+               <idProduct>9150</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>200</amount>
+               <description>VIRGIN 200</description>
+               <idProduct>9200</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>300</amount>
+               <description>VIRGIN 300</description>
+               <idProduct>9300</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+            <product>
+               <amount>500</amount>
+               <description>VIRGIN 500</description>
+               <idProduct>9500</idProduct>
+               <idProvider>9</idProvider>
+               <providerProduct>VIRGIN</providerProduct>
+               <type>TOPUP</type>
+            </product>
+         </listProducts>
+      </ns2:getProductsResponse>
+   </S:Body>
+</S:Envelope>

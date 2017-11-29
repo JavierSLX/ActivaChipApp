@@ -1,0 +1,57 @@
+Cliente
+ * 1-.Usuario no puede ser nulo
+ * 2-.Password no puede ser nulo
+ * 3-.Operador no puede ser nulo
+ * 4-.Datos de acceso invalido
+ * 10-.Acceso bloqueado
+ * 11-.Acceso restringido a este medio de compra
+ * 12-.Producto no autorizado
+ * 13-.Producto deshabilitado
+ * 21-.Se ha superado el limite de venta diaria
+ * 30-.Provedor no implementado
+ * 31-.Se ha superado el limite de venta diaria al numero celular
+ * 501-.Telefono no valido
+ * 502-.Destino no disponible
+ * 503-.Monto no valido
+ * 504-.Telefono no suscetible de abono
+ * 505-.Mantenimiento telcel en curso
+ * 506-.Mantenimiento telcel en curso
+ * 509-.Autorizador no disponible
+ * 3020-.Fondos Insuficientes
+Programador
+ * 5-.Operador invalido
+ * 6-.ID producto invalido
+ * 14-.Error al obtener ID_TX
+ * 16-.Orden TopUpID no encontrada
+ * 17-.Orden TopUpID finalizada previamente
+ ** 18-.TopUpId no existe u orden no finalizada por el proveedor
+ * 19-.TopUp Order has expired
+ * 20-.Fondos Insuficientes
+ * 1001-.Error al validar xml
+ * 500-.Timeout del provedor
+ * 507-.Rechazo por tabla de transacciones llena
+ * 508-.Rechazo por time-out interno
+ * 2000-.Error interno en conector a proveedor
+ * 2002-.conector no disponible. intenta mas tarde
+ * 2010-.Time-Out con operador
+ * 2012-.Concentrador en mantenimiento
+ * 511-.Fallo interno. La orden no fue exitosa
+ * 513-.La respuesta del proveedor no fue exitosa
+ * 3000-.INVALID AMOUNT 
+ * 3001-.INVALID TYPE NOTIFICATION 
+ * 3002-.INVALID NOTIFICATION ACCOUNT 
+ * 3006-.ID PRODUCTO INVALIDO 
+ * 3007-.TELEFONO INVALIDO  
+ * 3008-.INVALID LENGHT NUMBER ACCOUNT 
+ * 3009-.INVALID FEEPRODUCTIDVALUE 
+ * 3012-.PRODUCT NOT AUTHORIZED 
+ * 3013-.DISABLED PRODUCT 
+ * 3014-.Fail to Reserve ID. Try Again 
+ * 3016-.Order feeProductID Not Found 
+ * 3017-.Order feeProductID Finalized 
+ * 3019-.feeProductID Order Has Expired 
+ * 3512-.Fail TopUp Finalized 
+ * 3702-.TL ERROR 
+ * 3702-.CONEXION A SERVIDOR REMOTO NO DISPONIBLE 
+ * 3009-.INVALID FEEPRODUCTIDVALUE 
+ 

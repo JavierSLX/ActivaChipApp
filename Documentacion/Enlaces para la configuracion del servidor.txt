@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=Lt7l5tDzk_U  ----  Este video sirve para quitar la vercion de prueba de windows server 2012
+https://www.taringa.net/posts/ebooks-tutoriales/18946649/Renovar-los-dias-del-Periodo-de-Prueba-Windows-server-2012.html ---- Esta pagina sirve para reiniciar los dias de prueba de windows 2012
+https://www.youtube.com/watch?v=7ZelioSjNvc ---- Para modificar un archivo y permitir ver mi pagina remota
+https://www.youtube.com/watch?v=u36JIlU-Jh4 ---- Video que permite poner DNS a mi ip fija 
+https://www.youtube.com/watch?v=YMlLYLAF7uA ---- Configuracion del ssl(probar) 
+http://maxvilla.net/2015/11/15/cmo-permitir-el-acceso-remoto-a-mysql-usando-xampp/ ---Conexion a MYSQl de manera remota
+%PROGRAMDATA%\MySQL\MySQL Server X.X\my.ini ---Para encontrar el archivo de configuracion my.ini en el explorador de archivos
+ 

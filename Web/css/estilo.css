@@ -1,0 +1,307 @@
+@media only screen and (max-width: 480px){
+.animateForm {
+
+		background: #FFFFFF;
+
+		margin: 0 10% 25px;/*el ancho*/
+
+		overflow: hidden;
+
+		padding: 20px;/*lardo del cuadro*/
+
+		border: 1px solid rgba(147, 184, 189,0.8);
+		-webkit-box-shadow: 0pt 10px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	    box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+		-webkit-box-shadow: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+	}
+
+	#wrapper h1 {
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 50px;
+		padding: 0px 0 5px 0;
+		font-weight: bold;
+		text-align: center;
+		color: #3E4095;
+	}
+
+
+
+.animateForm input.user{   
+	padding: 5px 5px 5px 25px; 
+	background: url("social.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+
+.animateForm input.password{    
+	padding: 5px 5px 5px 25px;
+	background: url("password.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+.loginButto{
+	margin-left: 35%;
+	margin-right: 35%;
+}
+	/*.animateForm input {
+		padding: 2px;
+		width: 100%;
+		height: 25px;
+		border-radius: 2px;
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		background: #F7F7F7;
+}
+
+}*/
+
+	#loginButton{
+		font-weight: bold;
+		cursor: pointer;
+		margin:0 1px 1px 0;
+		border:1px solid #FFFFFF;
+		background: #2783AA;
+		border-radius: 5px 5px 5px 5px;
+		text-align: center;
+		font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	#loginButto:hover{
+		background: #FF00FF;
+	}
+	.pie{
+	text-align: center;
+}
+	
+}
+
+@media only screen and (min-width: 481px) and (max-width: 680px){
+	.animateForm {
+
+		background: #FFFFFF;
+
+		margin: 0 15% 25px;/*el ancho*/
+
+		overflow: hidden;
+
+		padding: 20px;/*lardo del cuadro*/
+
+		border: 1px solid rgba(147, 184, 189,0.8);
+		-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	    box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+		-webkit-box-shadow: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+	}
+
+	#wrapper h1 {
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 50px;
+		padding: 0px 0 5px 0;
+		font-weight: bold;
+		text-align: center;
+		color: #3E4095;
+	}
+	.animateForm input.user{   
+	padding: 5px 5px 5px 25px; 
+	background: url("social.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+
+.animateForm input.password{    
+	padding: 5px 5px 5px 25px;
+	background: url("password.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+.loginButto{
+	margin-left: 40%;
+	margin-right: 40%;
+}
+
+#loginButton{
+		font-weight: bold;
+		cursor: pointer;
+		
+		margin:0 1px 1px 0;
+		border:1px solid #FFFFFF;
+		background: #2783AA;
+		border-radius: 5px 5px 5px 5px;
+		text-align: center;
+		font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	#loginButto:hover{
+		background: #FF00FF;
+	}
+	.pie{
+	text-align: center;
+}
+
+}
+
+@media only screen and (min-width: 681px) and (max-width: 980px){
+	.animateForm {
+
+		background: #FFFFFF;
+
+		margin: 0 15% 25px;/*el ancho*/
+
+		overflow: hidden;
+
+		padding: 20px;/*lardo del cuadro*/
+
+		border: 1px solid rgba(147, 184, 189,0.8);
+		-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	    box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+		-webkit-box-shadow: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+	}
+
+	#wrapper h1 {
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 50px;
+		padding: 0px 0 5px 0;
+		font-weight: bold;
+		text-align: center;
+		color: #3E4095;
+	}
+	.animateForm input.user{   
+	padding: 5px 5px 5px 25px; 
+	background: url("social.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+
+.animateForm input.password{    
+	padding: 5px 5px 5px 25px;
+	background: url("password.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+.loginButto{
+	margin-left: 42%;
+	margin-right: 42%;
+}
+
+#loginButton{
+		font-weight: bold;
+		cursor: pointer;
+		
+		margin:0 1px 1px 0;
+		border:1px solid #FFFFFF;
+		background: #2783AA;
+		border-radius: 5px 5px 5px 5px;
+		text-align: center;
+		font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	#loginButto:hover{
+		background: #FF00FF;
+	}
+	.pie{
+	text-align: center;
+}
+}
+
+
+
+@media only screen and (min-width: 981px){
+	.animateForm {
+
+		background: #FFFFFF;
+
+		margin: 0 35% 25px;/*el ancho*/
+
+		overflow: hidden;
+
+		padding: 20px;/*lardo del cuadro*/
+
+		border: 1px solid rgba(147, 184, 189,0.8);
+		-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	    box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+		-webkit-box-shadow: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+	}
+
+	#wrapper h1 {
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 50px;
+		padding: 0px 0 5px 0;
+		font-weight: bold;
+		text-align: center;
+		color: #3E4095;
+	}
+	.animateForm input.user{   
+	padding: 5px 5px 5px 25px; 
+	background: url("social.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+
+.animateForm input.password{    
+	padding: 5px 5px 5px 25px;
+	background: url("password.png") no-repeat scroll 0 0 transparent;
+	background-position: 4px 4px; 
+	width: 90%;
+	height: 25px;
+		
+}
+.loginButto{
+	margin-left: 40%;
+	margin-right: 40%;
+}
+
+#loginButton{
+		font-weight: bold;
+		cursor: pointer;
+		
+		margin:0 1px 1px 0;
+		border:1px solid #FFFFFF;
+		background: #2783AA;
+		border-radius: 5px 5px 5px 5px;
+		text-align: center;
+		font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	#loginButto:hover{
+		background: #FF00FF;
+	}
+.pie{
+	text-align: center;
+}
+}
