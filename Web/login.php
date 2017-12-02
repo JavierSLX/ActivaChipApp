@@ -17,7 +17,7 @@
                     <div id="wrapper">
                         <div id="login" class="animateForm">
                             <form  method='post' action="inicioLogin.php" autocomplete="on">
-                                <h1><img src="img/atc1.png" alt="" class="titulo">ctivaqui</h1>
+                                <h1><img src="img/atc1.png" alt="" class="titulo">ctivaChip</h1>
                                 <p>
                                   <label  for="username" class="uname"> Usuario </label>
                                   <input class="user" id="nick" name="nick" required="required" type="text" placeholder="Usuario:" autofocus/>

@@ -1306,3 +1306,13 @@ INSERT INTO monto_carrier(monto,carrier_id)VALUES(150,7);
 INSERT INTO monto_carrier(monto,carrier_id)VALUES(200,7);
 INSERT INTO monto_carrier(monto,carrier_id)VALUES(300,7);
 INSERT INTO monto_carrier(monto,carrier_id)VALUES(500,7);
+
+CREATE TABLE log_error
+(	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	fecha DATETIME NOT NULL,
+    folioCliente varchar(50) NOT NULL,
+    topUpID INT not null,
+    errorCode INT not null,
+    errorMessage VARCHAR(100),
+    numero_id INT UNSIGNED NOT NULL REFERENCES numero.id ON UPDATE CASCADE
+);

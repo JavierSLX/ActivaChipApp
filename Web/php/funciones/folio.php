@@ -22,7 +22,7 @@ function primerFolio($claveCliente)
   //anio actual
   $anioActual = date("Y");
   //parte numerica
-  $numero = "0000001";
+  $numero = "000001";
 
   $primerFolio = $claveCliente."/".$numero."/".$anioActual;
   return $primerFolio;
