@@ -30,21 +30,52 @@
 
 
 
-.animateForm input.user{   
-	padding: 5px 5px 5px 25px; 
-	background: url("social.png") no-repeat scroll 0 0 transparent;
-	background-position: 4px 4px; 
-	width: 90%;
-	height: 25px;
+.animateForm input.user{  
+	background: #f2f2f2 url("social.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 85%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	
 		
 }
 
 .animateForm input.password{    
-	padding: 5px 5px 5px 25px;
-	background: url("password.png") no-repeat scroll 0 0 transparent;
-	background-position: 4px 4px; 
-	width: 90%;
-	height: 25px;
+	background: #f2f2f2 url("password.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 85%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
 		
 }
 .loginButto{
@@ -113,21 +144,63 @@
 		text-align: center;
 		color: #3E4095;
 	}
-	.animateForm input.user{   
-	padding: 5px 5px 5px 25px; 
+	.animateForm input.user{
+	background: #f2f2f2 url("social.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	   
+	/*padding: 5px 5px 5px 25px; 
 	background: url("social.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 
-.animateForm input.password{    
-	padding: 5px 5px 5px 25px;
+.animateForm input.password{  
+background: #f2f2f2 url("password.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+
+	/*padding: 5px 5px 5px 25px;
 	background: url("password.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 .loginButto{
@@ -187,21 +260,61 @@
 		text-align: center;
 		color: #3E4095;
 	}
-	.animateForm input.user{   
-	padding: 5px 5px 5px 25px; 
+	.animateForm input.user{ 
+	background: #f2f2f2 url("social.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;  
+	/*padding: 5px 5px 5px 25px; 
 	background: url("social.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 
 .animateForm input.password{    
-	padding: 5px 5px 5px 25px;
+	background: #f2f2f2 url("password.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	/*padding: 5px 5px 5px 25px;
 	background: url("password.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 .loginButto{
@@ -262,21 +375,61 @@
 		text-align: center;
 		color: #3E4095;
 	}
-	.animateForm input.user{   
-	padding: 5px 5px 5px 25px; 
+	.animateForm input.user{  
+	background: #f2f2f2 url("social.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;   
+	/*padding: 5px 5px 5px 25px; 
 	background: url("social.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 
 .animateForm input.password{    
-	padding: 5px 5px 5px 25px;
+	background: #f2f2f2 url("password.png") no-repeat scroll 0 0;
+	background-position: 5px 10px; 
+	width: 90%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	/*padding: 5px 5px 5px 25px;
 	background: url("password.png") no-repeat scroll 0 0 transparent;
 	background-position: 4px 4px; 
 	width: 90%;
-	height: 25px;
+	height: 25px;*/
 		
 }
 .loginButto{

@@ -317,19 +317,21 @@ error_reporting(0);
 		return $row[0];
 	}
 
-	function reporteCaducidad($idCliente)
+	// funcion para sacar los dias restantes antes de que no se puedan activar chips
+	function reporteCaducidad($idCliente,$inicio,$TAMANO_PAGINA)
 	{
 		$fechaHoy=date("Y-m-d");
 		global $db;
 
-		$query= "SELECT  nu.digitos, ca.nombre,nu.fecha,DATEDIFF(now(),nu.fecha)
+		$query= "SELECT  nu.digitos, ca.nombre,nu.fecha,29-DATEDIFF(now(),nu.fecha) AS caducidad
 		FROM numero nu, carrier ca, cliente cl
 		where nu.id NOT IN(SELECT numero_id from activado)
 		and nu.carrier_id = ca.id
 		and nu.cliente_id = cl.id
 		and cl.id = '$idCliente'
 		and ca.nombre !='TELCEL'
-		and DATE_ADD(nu.fecha, INTERVAL 29 DAY) >= CURDATE();";
+        and 29 >= DATEDIFF(now(),nu.fecha)
+        order by caducidad ASC LIMIt ".$inicio.", ".$TAMANO_PAGINA;
 		 
 		 $result = $db->query($query);
 		 if ($result){
@@ -339,6 +341,33 @@ error_reporting(0);
 		 return $result;
 	}
 
+	function reporteCaducidadcount($idCliente)
+	{
+		$fechaHoy=date("Y-m-d");
+		global $db;
+
+		$query= "SELECT  count(nu.id)
+		FROM numero nu, carrier ca, cliente cl
+		where nu.id NOT IN(SELECT numero_id from activado)
+		and nu.carrier_id = ca.id
+		and nu.cliente_id = cl.id
+		and cl.id = '$idCliente'
+		and ca.nombre !='TELCEL'
+        and 29 >= DATEDIFF(now(),nu.fecha);";
+		 
+		 global $db;
+		$result = $db->query($query);
+		if ($result)
+		{
+			$row=mysqli_fetch_row($result);
+			$num =$row[0];
+		}else{
+			echo "No entro";
+		}
+	  return $num;
+	}
+
+	//cambia la contraseña del cliente(usuario)
 	function cambiarPassword($idCliente, $password)
 	{
 	   global $db;

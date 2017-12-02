@@ -9,7 +9,22 @@ $datosUsuario=$sesion->datosUsuario();
   $usuarioID=$datosUsuario[0];
   $empresaID=$datosUsuario[1];
   $permisoID=$datosUsuario[2];
-$result =  reporteCaducidad($usuarioID);
+//$result =  reporteCaducidad($usuarioID);
+
+$TAMANO_PAGINA = 20;
+	$PAGINAS_MAXIMAS = 1;
+	// 
+	if (isset($_GET["p"])) {
+		$pagina = $_GET["p"];
+	} else {
+		$pagina = 1;
+	}
+	$inicio = ($pagina-1)*$TAMANO_PAGINA;
+
+$n= reporteCaducidadcount($usuarioID);
+$total_paginas = ceil($n/$TAMANO_PAGINA);
+
+$result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,6 +39,12 @@ $result =  reporteCaducidad($usuarioID);
 	<link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/principal.css" />
   <link href="css/styleR.css" rel="stylesheet" type="text/css" />
+
+  	<script>
+		function cambiaPagina(p){
+			window.open("caducidad?p="+p,"_self");
+		}
+	</script>
 </head>
 
 <body>
@@ -49,6 +70,9 @@ $result =  reporteCaducidad($usuarioID);
 
 		<p><br></p>
 		<h1>Reporte de Caducidad</h1>
+		<h4>
+			* El tiempo maximo de activación es de 29 dias habiles a partir de su compra (excepto chips "TELCEL").
+		</h4>
 	</div>
 
 	</article>
@@ -57,6 +81,7 @@ $result =  reporteCaducidad($usuarioID);
 	<article id='art1' class='col-lg-12 col-md-12 col-sm-10 col-xs-10'>
 <table class="responstable">
 	<br>
+	<?php $i=0; ?>
   <tr>
     <th>Compañia</th>
     <th data-th="Driver details"><span>Número</span></th>
@@ -73,6 +98,7 @@ $result =  reporteCaducidad($usuarioID);
 							echo "<td height = 10>"."   ".$row[3]."   "."</td>";
 
 							echo "</tr>";
+							$i++;
 				  }
 
 				 ?>
@@ -82,7 +108,34 @@ $result =  reporteCaducidad($usuarioID);
 
 
 </table>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script>
+<?php
+	if ($total_paginas>$PAGINAS_MAXIMAS) {
+		if ($pagina==$total_paginas) {
+			$inicio = $pagina-$PAGINAS_MAXIMAS;
+			$fin = $total_paginas;
+		} else {
+			$inicio = $pagina;
+			$fin = ($pagina-1) + $PAGINAS_MAXIMAS;
+			if ($fin>$total_paginas) $fin = $total_paginas;
+		}
+		if ($inicio!=1) {
+			echo '<button type="button" onclick="cambiaPagina(1)">Primera</button>';
+			echo '<button type="button" onclick="cambiaPagina('.($pagina-1).')">Ant.</button>';
+		}
+	} else {
+		$inicio = 1;
+		$fin = $total_paginas;
+	}
+	for ($i=$inicio; $i <= $fin; $i++) { 
+		echo '<button type="button" class="';
+		if ($i==$pagina) echo 'active';
+		echo '" onclick="cambiaPagina('.$i.')">'.$i.'</button>';
+	}
+	if ($total_paginas>$PAGINAS_MAXIMAS && $pagina!=$total_paginas) {
+		echo '<button type="button" onclick="cambiaPagina('.($pagina+1).')">Sig.</button>';
+		echo '<button type="button" onclick="cambiaPagina('.($total_paginas).')">Ultima</button>';
+	}  
+?>
 	</div>
 
 
