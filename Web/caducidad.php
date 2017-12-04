@@ -11,7 +11,7 @@ $datosUsuario=$sesion->datosUsuario();
   $permisoID=$datosUsuario[2];
 //$result =  reporteCaducidad($usuarioID);
 
-$TAMANO_PAGINA = 20;
+$TAMANO_PAGINA = 1;
 	$PAGINAS_MAXIMAS = 1;
 	// 
 	if (isset($_GET["p"])) {
@@ -38,8 +38,8 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="css/styleReporte.css">
 	<link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/principal.css" />
-  <link href="css/styleR.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/principal.css" />
+	<link href="css/styleR.css" rel="stylesheet" type="text/css" />
 
   	<script>
 		function cambiaPagina(p){
@@ -109,34 +109,41 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 
 
 </table>
-<?php
-	if ($total_paginas>$PAGINAS_MAXIMAS) {
-		if ($pagina==$total_paginas) {
-			$inicio = $pagina-$PAGINAS_MAXIMAS;
-			$fin = $total_paginas;
+<div class="paginacion">
+	<div class="primeras">
+	<?php
+		if ($total_paginas>$PAGINAS_MAXIMAS) {
+			if ($pagina==$total_paginas) {
+				$inicio = $pagina-$PAGINAS_MAXIMAS;
+				$fin = $total_paginas;
+			} else {
+				$inicio = $pagina;
+				$fin = ($pagina-1) + $PAGINAS_MAXIMAS;
+				if ($fin>$total_paginas) $fin = $total_paginas;
+			}
+
+			if ($inicio!=1) {
+				 
+				echo '<button type="button" id="primera" onclick="cambiaPagina(1)">Primera</button>';
+				echo '<button type="button" id="primera" onclick="cambiaPagina('.($pagina-1).')">Ant.</button>';
+				
+			}
 		} else {
-			$inicio = $pagina;
-			$fin = ($pagina-1) + $PAGINAS_MAXIMAS;
-			if ($fin>$total_paginas) $fin = $total_paginas;
+			$inicio = 1;
+			$fin = $total_paginas;
 		}
-		if ($inicio!=1) {
-			echo '<button type="button" onclick="cambiaPagina(1)">Primera</button>';
-			echo '<button type="button" onclick="cambiaPagina('.($pagina-1).')">Ant.</button>';
+		for ($i=$inicio; $i <= $fin; $i++) { 
+			echo '<button type="button" id="primera" class="';
+			if ($i==$pagina) echo 'active';
+			echo '" onclick="cambiaPagina('.$i.')">'.$i.' </button>';
 		}
-	} else {
-		$inicio = 1;
-		$fin = $total_paginas;
-	}
-	for ($i=$inicio; $i <= $fin; $i++) { 
-		echo '<button type="button" class="';
-		if ($i==$pagina) echo 'active';
-		echo '" onclick="cambiaPagina('.$i.')">'.$i.'</button>';
-	}
-	if ($total_paginas>$PAGINAS_MAXIMAS && $pagina!=$total_paginas) {
-		echo '<button type="button" onclick="cambiaPagina('.($pagina+1).')">Sig.</button>';
-		echo '<button type="button" onclick="cambiaPagina('.($total_paginas).')">Ultima</button>';
-	}  
-?>
+		if ($total_paginas>$PAGINAS_MAXIMAS && $pagina!=$total_paginas) {
+			echo '<button type="button" id="primera" onclick="cambiaPagina('.($pagina+1).')">Sig.</button>';
+			echo '<button type="button" id="primera" onclick="cambiaPagina('.($total_paginas).')">Ultima</button>';
+		}  
+
+	?>
+</div>
 	</div>
 
 
