@@ -209,7 +209,9 @@ error_reporting(0);
 			and n.carrier_id= ca.id
 			and c.id = '$id'
 			and DATE(a.fecha) >='$fechainicio'
-			AND DATE(a.fecha)<= '$fechafin'";
+			AND DATE(a.fecha)<= '$fechafin'
+			order by a.fecha desc
+			limit 50;";
 
 		global $db;
 		$result = $db->query($query);
@@ -226,7 +228,9 @@ error_reporting(0);
 			and n.cliente_id = cl.id
 			and n.carrier_id= ca.id
 			and DATE(a.fecha) >='$fechainicio'
-			AND DATE(a.fecha)<= '$fechafin' limit 50";
+			AND DATE(a.fecha)<= '$fechafin'
+			order by a.fecha desc
+			limit 50;";
 
 		global $db;
 		$result = $db->query($query);
