@@ -40,6 +40,7 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/principal.css" />
 	<link href="css/styleR.css" rel="stylesheet" type="text/css" />
+	
 
   	<script>
 		function cambiaPagina(p){
@@ -55,7 +56,7 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
           <li ><a href="recarga">Inicio</a></li>
           <li ><a href="reporte">Reporte</a></li>
             <?php if ($permisoID == 2) {
-            echo '<li><a href="">Caducidad</a></li>';
+            echo '<li class="active"><a href="">Caducidad</a></li>';
           	} ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
             <ul id="nav-right">

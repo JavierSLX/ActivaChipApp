@@ -133,7 +133,7 @@ if (empty($fechaIn && $fechafi)){
 <br>
 <br>
 <br>
-Contactoo: webmaster.atc.mx@gmail.com <br>
+Contacto: webmaster.atc.mx@gmail.com <br>
 Copyright© 2017-2018. Morpheus DSS
 </footer>
 </html>
