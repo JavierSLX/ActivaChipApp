@@ -406,5 +406,17 @@ error_reporting(0);
 		$query= "INSERT INTO log_error(fecha, folioCliente, topUpID, errorCode, errorMessage, numero_id) VALUES (now(), '$folioCliente', $topUpID, $idError, '$descripcion', $idNumero);";
 		$result = $db->query($query);
 	}
+
+	// checa si la contraseña antigua que desea cambiar esta registrada en la base de datos
+	function cambiarPasswordOld($idCliente)
+	{
+	   global $db;
+
+		$query= "SELECT pass FROM permiso_cliente
+				  WHERE cliente_id = '$idCliente'";
+		 $result = $db->query($query);
+			 $row=mysqli_fetch_row($result);
+			return $row[0];
+	}
  ?>
  

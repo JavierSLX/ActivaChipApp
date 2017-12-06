@@ -72,6 +72,7 @@ if (empty($fechaIn && $fechafi)){
 	$fechaIn=date("Y-m-d");
 	$fechafi=date("Y-m-d");
 	if($permisoID == 2){
+		
 	$result = Reporte($id,$fechaIn,$fechafi);
 	}else{
 	$result = reporteAdministrador($fechaIn,$fechafi);
@@ -133,7 +134,7 @@ if (empty($fechaIn && $fechafi)){
 <br>
 <br>
 <br>
-Contacto: webmaster.atc.mx@gmail.com <br>
+Contactoo: webmaster.atc.mx@gmail.com <br>
 Copyright© 2017-2018. Morpheus DSS
 </footer>
 </html>

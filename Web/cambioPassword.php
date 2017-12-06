@@ -12,31 +12,44 @@ $datosUsuario=$sesion->datosUsuario();
   $empresaID=$datosUsuario[1];
   $permisoID=$datosUsuario[2];
 
+  $clave0 = $_POST['pwsOld'];
   $clave1 = $_POST['digitos'];
   $clave2 = $_POST['numero'];
 
-  if (!empty($clave1)&&!empty($clave2)) {
-    if ($clave1 == $clave2) {
-      $parametros = array('password'=>$clave2);
-      $passencriptado = $cliente->call('encriptar',$parametros);
-      $cambio = cambiarPassword($usuarioID,$passencriptado);
-      //$usuario = sacarCliente($usuarioID);
-      $sesion->nuevoPass($passencriptado);
+  if (!empty($clave0)) {
+    $parametros = array('password'=>$clave0);
+    $pwsOldEncriptado = $cliente->call('encriptar',$parametros);
+    $confirmaPswOld = cambiarPasswordOld($usuarioID);
+    if ($pwsOldEncriptado == $confirmaPswOld) {
+      if (!empty($clave1)&&!empty($clave2)) {
+        if ($clave1 == $clave2) {
+          $parametros = array('password'=>$clave2);
+          $passencriptado = $cliente->call('encriptar',$parametros);
+          $cambio = cambiarPassword($usuarioID,$passencriptado);
+          //$usuario = sacarCliente($usuarioID);
+          $sesion->nuevoPass($passencriptado);
+          ?>
+          <script type="text/javascript">
+            alert("Tu nueva contraseña ha sido cambiado con exito")
+            //location.href="recarga.php"
+          </script>
+          <?php
+        }else {
+          ?>
+          <script type="text/javascript">
+            alert("no coinciden los campos")
+          </script>
+          <?php
+        }
+      }
+    } else {
       ?>
-      <script type="text/javascript">
-        alert("Tu nueva contraseña ha sido cambiado con exito")
-        //location.href="recarga.php"
-      </script>
-      <?php
-    }else {
-      ?>
-      <script type="text/javascript">
-        alert("no coinciden los campos")
-      </script>
-      <?php
+          <script type="text/javascript">
+            alert("El campo de la contrseña actual no coincide")
+          </script>
+          <?php
     }
   }
-
 
 ?>
 <!DOCTYPE html>
@@ -73,7 +86,8 @@ $datosUsuario=$sesion->datosUsuario();
   <h1><img src="img/atc1.png">ctivaChip</h1>
 
     <form method='post' action =""  autocomplete="off">
-
+      
+      <input id="pwsOld" name="pwsOld" maxlength="15" onkeypress = 'return tel(event)' type="text" placeholder="Contraseña Actual"/>
       <input id="digitos" name="digitos" maxlength="15" onkeypress = 'return tel(event)' type="text" placeholder="Nueva contraseña"/>
       <input id="numero"  onkeypress = 'return tel(event)' maxlength="15" name="numero" type="text" placeholder="Confirma nueva contraseña"/>
 
