@@ -11,7 +11,7 @@ $datosUsuario=$sesion->datosUsuario();
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8" />
 	<title>ActivaChip</title>
@@ -110,7 +110,7 @@ if (empty($fechaIn)){
 							echo "<td height = 10>"."   ".$row[1]."   "."</td>";
 							echo "<td height = 10>"."   ".$row[2]."   "."</td>";
 							echo "<td height = 10>"."$".$row[3]."   "."</td>";
-							echo "<td height = 10>"."   ".utf8_encode($row[4])."   "."</td>";
+							echo "<td height = 10>"."   ".utf8_encode(utf8_decode($row[4]))."   "."</td>";
 							echo "</tr>";
 				  }
 

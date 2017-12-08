@@ -12,44 +12,6 @@ $datosUsuario=$sesion->datosUsuario();
   $empresaID=$datosUsuario[1];
   $permisoID=$datosUsuario[2];
 
-  $clave0 = $_POST['pwsOld'];
-  $clave1 = $_POST['digitos'];
-  $clave2 = $_POST['numero'];
-
-  if (!empty($clave0)) {
-    $parametros = array('password'=>$clave0);
-    $pwsOldEncriptado = $cliente->call('encriptar',$parametros);
-    $confirmaPswOld = cambiarPasswordOld($usuarioID);
-    if ($pwsOldEncriptado == $confirmaPswOld) {
-      if (!empty($clave1)&&!empty($clave2)) {
-        if ($clave1 == $clave2) {
-          $parametros = array('password'=>$clave2);
-          $passencriptado = $cliente->call('encriptar',$parametros);
-          $cambio = cambiarPassword($usuarioID,$passencriptado);
-          //$usuario = sacarCliente($usuarioID);
-          $sesion->nuevoPass($passencriptado);
-          ?>
-          <script type="text/javascript">
-            alert("Tu nueva contraseña ha sido cambiado con exito")
-          </script>
-          <?php
-        }else {
-          ?>
-          <script type="text/javascript">
-            alert("no coinciden los campos de nueva contraseña")
-          </script>
-          <?php
-        }
-      }
-    } else {
-      ?>
-          <script type="text/javascript">
-            alert("El campo de la contrseña actual no coincide")
-          </script>
-          <?php
-    }
-  }
-
 ?>
 <!DOCTYPE html>
 <html >
@@ -104,7 +66,7 @@ $datosUsuario=$sesion->datosUsuario();
 
     <form id="formulario" method='post'  autocomplete="off">
       
-      <input id="pwsOld" name="pwsOld" maxlength="15"  type="text" placeholder="Contraseña Actual"/>
+      <input id="pwsOld" name="pwsOld" maxlength="15"  type="text" placeholder="Contraseña Actual" autofocus/>
       <input id="digitos" name="digitos" maxlength="15"  type="text" placeholder="Nueva contraseña"/>
       <input id="numero"  maxlength="15" name="numero" type="text" placeholder="Confirma nueva contraseña"/>
 
@@ -115,7 +77,7 @@ $datosUsuario=$sesion->datosUsuario();
 </div>
   <script>
 $("#btn_enviar").click(function(){
-  var url = "./cambioPassword"; // El script a dónde se realizará la petición.
+  var url = "./procesoCambioPwd"; // El script a dónde se realizará la petición.
     $.ajax({
       type: "POST",
       url: url,
@@ -126,30 +88,26 @@ $("#btn_enviar").click(function(){
         var miCampoTexto = document.getElementById("digitos").value;
         var miCampoTexto2 = document.getElementById("numero").value;
         //las condiciones de los campos del formulario
-        if (miCampoTexto0.length == 0){
-          alert('El campo 0 esta vacio!');
+        if (miCampoTexto0.length == 0){;
           document.getElementById("pwsOld").focus();
           return false;
         }else if (miCampoTexto.length == 0 ) {
-          alert('El campo 1 esta vacio!');
           document.getElementById("digitos").focus();
           return false;
         }else if (miCampoTexto2.length == 0 ) {
-          alert('El campo 2 esta vacio!');
           document.getElementById("numero").focus();
           return false;
         } else if (miCampoTexto != miCampoTexto2){
-          alert('los campos de contraseña actual no coinciden');
-          document.getElementById("digitos").select();
+          alert('Los campos de contraseña actual no coinciden');
+          document.getElementById("digitos").value = "";
+          document.getElementById("numero").value = "";
+          document.getElementById("digitos").focus();
           return false;
         }
       
       },
       success: function(data){
         $("#respuesta").html(data); // Mostrar la respuestas del script PHP.
-          document.getElementById("pwsOld") = "";
-        document.getElementById("digitos") = "";
-        document.getElementById("numero") = "";
       }
 
   });
@@ -160,7 +118,7 @@ $(function(){
   //funcion cunado tecla enter se presiona
   $(window).keypress(function(e){
     if (e.keyCode == 13) {
-      var url = "./cambioPassword"; // El script a dónde se realizará la petición.
+      var url = "./procesoCambioPwd"; // El script a dónde se realizará la petición.
       $.ajax({
         type: "POST",
         url: url,
@@ -172,28 +130,24 @@ $(function(){
           var miCampoTexto2 = document.getElementById("numero").value;
           //las condiciones de los campos del formulario
           if (miCampoTexto0.length == 0){
-          alert('El campo 0 esta vacio!');
           document.getElementById("pwsOld").focus();
           return false;
         }else if (miCampoTexto.length == 0 ) {
-          alert('El campo 1 esta vacio!');
           document.getElementById("digitos").focus();
           return false;
         }else if (miCampoTexto2.length == 0 ) {
-          alert('El campo 2 esta vacio!');
           document.getElementById("numero").focus();
           return false;
         }else if (miCampoTexto != miCampoTexto2){
-          alert('los campos de contraseña actual no coinciden');
-          document.getElementById("digitos").select();
+          alert('Los campos de contraseña actual no coinciden');
+          document.getElementById("digitos").value = "";
+          document.getElementById("numero").value = "";
+          document.getElementById("digitos").focus();
           return false;
         }
         },
         success: function(data){
           $("#respuesta").html(data); // Mostrar la respuestas del script PHP.
-          document.getElementById("pwsOld") = "";
-        document.getElementById("digitos") = "";
-        document.getElementById("numero") = "";
         }
       });
       return false; // Evitar ejecutar el submit del formulario.
