@@ -31,6 +31,7 @@ if (isset($_POST["nick"]))
 		{
 			$permisoID = 2;
 			$usuarioID = $resultado[0];
+			insertarRegistroLogin($usuarioID);
 			$sesion->inicioLogin($usuario,$passencriptado);
 			echo "<script language=\"JavaScript\">alert('Bienvenido usuario: $usuario.');
       location.href='recarga';</script>";
