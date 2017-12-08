@@ -7,13 +7,11 @@ if ($sesion->estadoLogin()==true) {
 $datosUsuario=$sesion->datosUsuario();
   $usuarioID=$datosUsuario[0];
   $empresaID=$datosUsuario[1];
-  $permisoID=$datosUsuario[2];
-  
-  
+  $permisoID=$datosUsuario[2];  
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8" />
 	<title>ActivaChip</title>
@@ -60,29 +58,28 @@ $datosUsuario=$sesion->datosUsuario();
 		<form id="formulario">
 			<p><label for="fecha"> DE:
 				<input type="date" name="fechainicio"  step="1" value="<?php echo date("Y-m-d");?>">
-			<input type="date" name="fechafin" step="1"value="<?php echo date("Y-m-d");?>">
 			<input id="boton_enviar" method='post' type="submit">
 
 			<?php
 	$fechaIn = $_POST["fechainicio"];
-	$fechafi= $_POST["fechafin"];
 	
-if (empty($fechaIn && $fechafi)){
+if (empty($fechaIn)){
 	$id=$usuarioID;
 	$fechaIn=date("Y-m-d");
 	$fechafi=date("Y-m-d");
 	if($permisoID == 2){
-	$result = Reporte($id,$fechaIn,$fechafi);
+		
+	$result = Reporte($id,$fechaIn);
 	}else{
-	$result = reporteAdministrador($fechaIn,$fechafi);
+	$result = reporteAdministrador($fechaIn);
 	}
 	
 } else {
 	$id=$usuarioID;
 	if($permisoID == 2){
-	$result = Reporte($id,$fechaIn,$fechafi);
+	$result = Reporte($id,$fechaIn);
 	}else{
-	$result = reporteAdministrador($fechaIn,$fechafi);
+	$result = reporteAdministrador($fechaIn);
 	}
 }
 
@@ -113,7 +110,7 @@ if (empty($fechaIn && $fechafi)){
 							echo "<td height = 10>"."   ".$row[1]."   "."</td>";
 							echo "<td height = 10>"."   ".$row[2]."   "."</td>";
 							echo "<td height = 10>"."$".$row[3]."   "."</td>";
-							echo "<td height = 10>"."   ".utf8_encode($row[4])."   "."</td>";
+							echo "<td height = 10>"."   ".utf8_encode(utf8_decode($row[4]))."   "."</td>";
 							echo "</tr>";
 				  }
 
@@ -133,7 +130,7 @@ if (empty($fechaIn && $fechafi)){
 <br>
 <br>
 <br>
-Contacto: webmaster.atc.mx@gmail.com <br>
+Contactoo: webmaster.atc.mx@gmail.com <br>
 Copyright© 2017-2018. Morpheus DSS
 </footer>
 </html>

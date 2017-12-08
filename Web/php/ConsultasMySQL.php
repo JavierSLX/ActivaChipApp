@@ -199,7 +199,7 @@ error_reporting(0);
 
 
 	//Funcion que saca los datos para el reporte
-	function Reporte($id, $fechainicio, $fechafin)
+	function Reporte($id, $fechainicio)
 	{
 		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad,cl.nombre
 			from numero n, activado a, cliente c, carrier ca,cliente cl
@@ -209,9 +209,7 @@ error_reporting(0);
 			and n.carrier_id= ca.id
 			and c.id = '$id'
 			and DATE(a.fecha) >='$fechainicio'
-			AND DATE(a.fecha)<= '$fechafin'
-			order by a.fecha desc
-			limit 50;";
+			order by a.fecha desc;";
 
 		global $db;
 		$result = $db->query($query);
@@ -220,7 +218,7 @@ error_reporting(0);
 	}
 	
 	//Funcion que saca los datos para el reporte si es administrador
-	function reporteAdministrador($fechainicio, $fechafin)
+	function reporteAdministrador($fechainicio)
 	{
 		$query = "SELECT ca.nombre,n.digitos, a.fecha, a.cantidad,cl.nombre
 			from numero n, activado a,carrier ca,cliente cl
@@ -228,9 +226,7 @@ error_reporting(0);
 			and n.cliente_id = cl.id
 			and n.carrier_id= ca.id
 			and DATE(a.fecha) >='$fechainicio'
-			AND DATE(a.fecha)<= '$fechafin'
-			order by a.fecha desc
-			limit 50;";
+			order by a.fecha desc;";
 
 		global $db;
 		$result = $db->query($query);
@@ -238,7 +234,7 @@ error_reporting(0);
 		return $result;
 	}
 	
-	function ReporteContador($id, $fechainicio, $fechafin)
+	function ReporteContador($id, $fechainicio)
 	{
 		$query = "SELECT COUNT(*)
 			from numero n, activado a, cliente c, carrier ca
@@ -246,8 +242,7 @@ error_reporting(0);
 			and n.cliente_id = c.id
 			and n.carrier_id= ca.id
 			and c.id = '$id'
-			and DATE(a.fecha) >='$fechainicio'
-			AND DATE(A.fecha)<= '$fechafin'";
+			and DATE(a.fecha) >='$fechainicio'";
 
 		global $db;
 		$result = $db->query($query);
@@ -405,6 +400,18 @@ error_reporting(0);
 
 		$query= "INSERT INTO log_error(fecha, folioCliente, topUpID, errorCode, errorMessage, numero_id) VALUES (now(), '$folioCliente', $topUpID, $idError, '$descripcion', $idNumero);";
 		$result = $db->query($query);
+	}
+
+	// checa si la contraseña antigua que desea cambiar esta registrada en la base de datos
+	function cambiarPasswordOld($idCliente)
+	{
+	   global $db;
+
+		$query= "SELECT pass FROM permiso_cliente
+				  WHERE cliente_id = '$idCliente'";
+		 $result = $db->query($query);
+			 $row=mysqli_fetch_row($result);
+			return $row[0];
 	}
  ?>
  

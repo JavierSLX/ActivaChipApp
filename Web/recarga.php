@@ -115,7 +115,9 @@ $("#btn_enviar").click(function(){
           return false;
         } else if (miCampoTexto != miCampoTexto2){
           alert('los digitos del numero telefonico no coinciden');
-          document.getElementById("digitos").select();
+          document.getElementById("digitos").value = "";
+          document.getElementById("numero").value = "";
+          document.getElementById("digitos").focus();
           return false;
         }
       document.getElementById("loader").style.display="block";
