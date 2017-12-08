@@ -11,7 +11,7 @@ $datosUsuario=$sesion->datosUsuario();
   $permisoID=$datosUsuario[2];
 //$result =  reporteCaducidad($usuarioID);
 
-$TAMANO_PAGINA = 1;
+$TAMANO_PAGINA = 25;
 	$PAGINAS_MAXIMAS = 1;
 	// 
 	if (isset($_GET["p"])) {

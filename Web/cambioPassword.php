@@ -12,8 +12,14 @@ $datosUsuario=$sesion->datosUsuario();
   $empresaID=$datosUsuario[1];
   $permisoID=$datosUsuario[2];
 
+  $clave0 = $_POST['actual'];
   $clave1 = $_POST['digitos'];
   $clave2 = $_POST['numero'];
+  
+  if (!empty($clave0))
+  {
+	  
+  }
 
   if (!empty($clave1)&&!empty($clave2)) {
     if ($clave1 == $clave2) {
@@ -74,6 +80,7 @@ $datosUsuario=$sesion->datosUsuario();
 
     <form method='post' action =""  autocomplete="off">
 
+		<input id="actual" name="antigua" maxlength="15" onkeypress = 'return tel(event)' type="text" placeholder="Contraseña actual"/>
       <input id="digitos" name="digitos" maxlength="15" onkeypress = 'return tel(event)' type="text" placeholder="Nueva contraseña"/>
       <input id="numero"  onkeypress = 'return tel(event)' maxlength="15" name="numero" type="text" placeholder="Confirma nueva contraseña"/>
 

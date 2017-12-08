@@ -15,13 +15,13 @@
 		//Si el saldo es inferior a un limite y la bandera esta desactivada manda un correo y desactiva la bandera
 		//$bandera = true;
 		$bandera = sacarAlerta($arreglo[0]);
-		if ($saldo < 5695 && !$bandera)
+		if ($saldo < 5000 && !$bandera)
 		{
 			mandarCorreo($saldo, $arreglo[1], "Administrador");
 			//$bandera = true;
 			actualizarAlerta($arreglo[0], 1);
 		}
-		else if ($saldo > 5695 && $bandera)
+		else if ($saldo > 5000 && $bandera)
 			//$bandera = false;
 			actualizarAlerta($arreglo[0], 0);
 		
