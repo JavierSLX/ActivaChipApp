@@ -17,6 +17,11 @@ $datosUsuario=$sesion->datosUsuario();
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" type="text/css" href="css/principal.css" />
       <link href="css/styleR.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
 
       <script>
         function tel(e){

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
 <?php
 	require ("recargaATC.php");
 	require "claseSesion.php";
@@ -25,9 +40,9 @@ $datosUsuario=$sesion->datosUsuario();
 	
 	if(empty($bandera) && $permisoID == 2)
 	{
-		echo "<script language=\"JavaScript\">alert(\"El número $numero no existe en la base de datos\");";
-		echo "location.href =\"./recarga\";</script>";
-		
+		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el número $numero no existe en la base de datos!','error');";
+		echo "document.getElementById('digitos').value = '';";
+		echo "document.getElementById('numero').value = '';</script>";		
 		exit;
 	}
 	else
@@ -38,8 +53,9 @@ $datosUsuario=$sesion->datosUsuario();
 			$idCliente = $valor;
 	}
 	if (empty($valor) && $permisoID == 1) {
-		echo "<script language=\"JavaScript\">alert(\"El número $numero no existe en la base de datos\");";
-		echo "location.href =\"./recarga\";</script>";
+		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el número $numero no existe en la base de datos!','error');";
+		echo "document.getElementById('digitos').value = '';";
+		echo "document.getElementById('numero').value = '';</script>";
 		exit;
 	}
 	
@@ -48,8 +64,9 @@ $datosUsuario=$sesion->datosUsuario();
 	
 	if ($existente)
 	{
-		echo "<script language=\"JavaScript\">alert(\"Ya fue activado el numero $numero\");";
-		echo "location.href =\"./recarga\";</script>";
+		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el número $numero ya fue activado!','error');";
+		echo "document.getElementById('digitos').value = '';";
+		echo "document.getElementById('numero').value = '';</script>";
 		exit;
 	}
 	
@@ -69,8 +86,11 @@ $datosUsuario=$sesion->datosUsuario();
 		$dias = dias_transcurridos($fechaInicial, $fechaFinal);
 		if ($dias > 29)
 		{
-			echo "<script language=\"JavaScript\">alert(\"$permisoID El chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)\");";
-			echo "location.href =\"./recarga\";</script>";
+			//echo "<script language=\"JavaScript\">alert(\"$permisoID El chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)\");";
+			//echo "location.href =\"./recarga\";</script>";
+			echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)!','error');";
+			echo "document.getElementById('digitos').value = '';";
+			echo "document.getElementById('numero').value = '';</script>";
 			exit;
 		}
 	}
@@ -99,14 +119,15 @@ $datosUsuario=$sesion->datosUsuario();
 	{
 		$idNumero = sacarIDNumero($numero);
 		insertarActivado($idNumero, $resultado[0], $folio, $monto);
-		echo "<script language=\"JavaScript\">alert(\"Recarga al numero $numero hecha de manera correcta. Guarde su folio $folio para cualquier aclaración.\");";
-		echo "location.href =\"./recarga\";</script>";
-		
+		echo "<script language=\"JavaScript\">swal('Proceso exitoso.','¡Recarga al numero $numero hecha de manera correcta. Guarde su folio $folio para cualquier aclaración.!','success');";
+		echo "document.getElementById('digitos').value = '';";
+		echo "document.getElementById('numero').value = '';</script>";
 	}
 	else
 	{
-		echo "<script language=\"JavaScript\">alert(\"$resultado[1]. Error al activar $numero\");";
-		echo "location.href =\"./recarga\";</script>";
+		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, $resultado[1]. Error al activar $numero\!','error');";
+		echo "document.getElementById('digitos').value = '';";
+		echo "document.getElementById('numero').value = '';</script>";
 	}
 	} else {
     header("location:index");
