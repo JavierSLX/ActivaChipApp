@@ -35,6 +35,7 @@ $datosUsuario=$sesion->datosUsuario();
             echo '<li ><a href="caducidad">Caducidad</a></li>';
           	} ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
+            <li><a href="consultaFolio">Folio</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
 
@@ -110,7 +111,7 @@ if (empty($fechaIn)){
 							echo "<td height = 10>"."   ".$row[1]."   "."</td>";
 							echo "<td height = 10>"."   ".$row[2]."   "."</td>";
 							echo "<td height = 10>"."$".$row[3]."   "."</td>";
-							echo "<td height = 10>"."   ".utf8_encode(utf8_decode($row[4]))."   "."</td>";
+							echo "<td height = 10>"."   ".utf8_encode($row[4])."   "."</td>";
 							echo "</tr>";
 				  }
 

@@ -1,5 +1,5 @@
 ﻿<?php
-error_reporting(0);
+	error_reporting(0);
 	$db = new mysqli('localhost', 'root', '', 'recargasatc');
 
 	if ($db->connect_error) 
@@ -28,10 +28,10 @@ error_reporting(0);
 		return $count;
 	}
 	
-	//Método que permite saber si un numero existe en la base de datos
-	function consultarNumeroCliente($numero)
+	//Método que permite saber si un numero existe en la base de datos con su empresa 
+	function consultarNumeroCliente($numero, $empresaID)
 	{
-		$query = "SELECT cliente_id FROM numero WHERE digitos = '$numero';";
+		$query = "SELECT num.cliente_id FROM numero num, cliente cli WHERE num.digitos = '$numero' and num.cliente_id = cli.id and cli.empresa_id = '$empresaID';";
 		global $db;
 		$result = mysqli_query($db , $query);
 		if(!$result)
@@ -119,7 +119,7 @@ error_reporting(0);
 	//Función que saca si existen los datos del login del administrador
 	function loginAdmin($nick, $pass)
 	{
-		$query = "SELECT administrador_id, permiso_id FROM permiso_administrador WHERE nickname = '$nick' AND pass = '$pass' AND activo = true;";
+		$query = "SELECT pa.administrador_id, adm.empresa_id FROM permiso_administrador pa, administrador adm  WHERE pa.nickname = '$nick' AND pa.pass = '$pass' AND pa.activo = true and pa.administrador_id = adm.id;";
 		global $db;
 	
 		$result =  $db->query($query);
@@ -208,7 +208,7 @@ error_reporting(0);
 			and n.cliente_id = c.id
 			and n.carrier_id= ca.id
 			and c.id = '$id'
-			and DATE(a.fecha) >='$fechainicio'
+			and DATE(a.fecha) ='$fechainicio'
 			order by a.fecha desc;";
 
 		global $db;
@@ -225,7 +225,7 @@ error_reporting(0);
 			where a.numero_id = n.id
 			and n.cliente_id = cl.id
 			and n.carrier_id= ca.id
-			and DATE(a.fecha) >='$fechainicio'
+			and DATE(a.fecha) ='$fechainicio'
 			order by a.fecha desc;";
 
 		global $db;
@@ -242,7 +242,7 @@ error_reporting(0);
 			and n.cliente_id = c.id
 			and n.carrier_id= ca.id
 			and c.id = '$id'
-			and DATE(a.fecha) >='$fechainicio'";
+			and DATE(a.fecha) ='$fechainicio';";
 
 		global $db;
 		$result = $db->query($query);
@@ -365,6 +365,37 @@ error_reporting(0);
 		}
 	  return $num;
 	}
+	//Compara folio con el numero con su respectivo cliente
+	function folioCliente($folio, $empresaID)
+	{
+		global $db;
+	
+		$query = "select num.digitos, pv.tipo, cc.numero
+		from numero num, cliente cli, clave_cliente cc, punto_venta pv
+		where num.folio='$folio'
+		and num.cliente_id=cli.id
+		and cc.cliente_id=cli.id
+		and cc.puntoventa_id=pv.id
+		and cli.empresa_id='$empresaID';";
+
+	
+		$result = $db->query($query);
+				 $row=mysqli_fetch_row($result);
+				return $row;
+	}
+
+	//comparar el folio con el numero
+	function comprobarFolio($folio, $clienteID)
+	{
+		global $db;
+
+		$query = "select digitos from numero where folio = '$folio' and cliente_id='$clienteID';";
+		
+	  	$result = $db->query($query);
+			 $row=mysqli_fetch_row($result);
+			return $row[0];
+	}
+
 
 	//cambia la contraseña del cliente(usuario)
 	function cambiarPassword($idCliente, $password)

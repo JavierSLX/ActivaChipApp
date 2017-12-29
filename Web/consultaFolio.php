@@ -23,11 +23,11 @@ $datosUsuario=$sesion->datosUsuario();
 
   if (!empty($clave1)&&!empty($clave2)) {
     if ($clave1 == $clave2) {
-      $parametros = array('password'=>$clave2);
-      $passencriptado = $cliente->call('encriptar',$parametros);
-      $cambio = cambiarPassword($usuarioID,$passencriptado);
+      //$parametros = array('password'=>$clave2);
+      //$passencriptado = $cliente->call('encriptar',$parametros);
+      $cambio = comprobarFolio($folio);
       //$usuario = sacarCliente($usuarioID);
-      $sesion->nuevoPass($passencriptado);
+      //$sesion->nuevoPass($passencriptado);
       ?>
       <script type="text/javascript">
         alert("Tu nueva contraseña ha sido cambiado con exito")
@@ -53,6 +53,14 @@ $datosUsuario=$sesion->datosUsuario();
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" type="text/css" href="css/principal.css" />
       <link href="css/styleR.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/principal.css" />
+      <link href="css/styleR.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
       <script>
         function tel(e){
           key=e.keyCode || e.which;
@@ -83,8 +91,8 @@ $datosUsuario=$sesion->datosUsuario();
             <?php if ($permisoID == 2) {
             echo '<li ><a href="caducidad">Caducidad</a></li>';
             } ?>
-            <li class="active"><a href="">Cuenta</a></li>
-            <li><a href="consultaFolio">Folio</a></li>
+            <li ><a href="cambioPassword">Cuenta</a></li>
+            <li class="active"><a href="consultaFolio">Folio</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
 
@@ -98,46 +106,27 @@ $datosUsuario=$sesion->datosUsuario();
 
     <form id="formulario" method='post'  autocomplete="off">
       
-      <input id="pwsOld" name="pwsOld" maxlength="15"  type="text" placeholder="Contraseña Actual" autofocus/>
-      <input id="digitos" name="digitos" maxlength="15"  type="text" placeholder="Nueva contraseña"/>
-      <input id="numero"  maxlength="15" name="numero" type="text" placeholder="Confirma nueva contraseña"/>
-
+      <input id="campoFolio" name="campoFolio" onkeypress = 'return tel(event)' maxlength="20" type="text" placeholder="Folio" autofocus/>
       <!--<     -->
       <button id="btn_enviar" color = "black" onclick="puntero()">Aceptar</button>
     </form>
   </div>
 </div>
   <script>
-$("#btn_enviar").click(function(){
-  var url = "./procesoCambioPwd"; // El script a dónde se realizará la petición.
+    $("#btn_enviar").click(function(){
+  var url = "./php/procesoFolio.php"; // El script a dónde se realizará la petición.
     $.ajax({
       type: "POST",
       url: url,
       data: $("#formulario").serialize(), // Adjuntar los campos del formulario enviado.
       //Ejecutar antes de ser enviado
       beforeSend: function(){
-        var miCampoTexto0 = document.getElementById("pwsOld").value;
-        var miCampoTexto = document.getElementById("digitos").value;
-        var miCampoTexto2 = document.getElementById("numero").value;
+        var miCampoTexto0 = document.getElementById("campoFolio").value;
         //las condiciones de los campos del formulario
         if (miCampoTexto0.length == 0){;
-          document.getElementById("pwsOld").focus();
+          document.getElementById("campoFolio").focus();
           return false;
-        }else if (miCampoTexto.length == 0 ) {
-          document.getElementById("digitos").focus();
-          return false;
-        }else if (miCampoTexto2.length == 0 ) {
-          document.getElementById("numero").focus();
-          return false;
-        } else if (miCampoTexto != miCampoTexto2){
-          alert('Los campos de contraseña actual no coinciden');
-          document.getElementById("digitos").value = "";
-          document.getElementById("numero").value = "";
-          document.getElementById("digitos").focus();
-          return false;
-        }
-      
-      },
+        }},
       success: function(data){
         $("#respuesta").html(data); // Mostrar la respuestas del script PHP.
       }
@@ -150,34 +139,20 @@ $(function(){
   //funcion cunado tecla enter se presiona
   $(window).keypress(function(e){
     if (e.keyCode == 13) {
-      var url = "./procesoCambioPwd"; // El script a dónde se realizará la petición.
+      var url = "./php/procesoFolio.php"; // El script a dónde se realizará la petición.
       $.ajax({
         type: "POST",
         url: url,
         data: $("#formulario").serialize(), // Adjuntar los campos del formulario enviado.
         //Ejecutar antes de ser enviado
         beforeSend: function(){
-          var miCampoTexto0 = document.getElementById("pwsOld").value;
-          var miCampoTexto = document.getElementById("digitos").value;
-          var miCampoTexto2 = document.getElementById("numero").value;
+          var miCampoTexto0 = document.getElementById("campoFolio").value;
           //las condiciones de los campos del formulario
           if (miCampoTexto0.length == 0){
-          document.getElementById("pwsOld").focus();
-          return false;
-        }else if (miCampoTexto.length == 0 ) {
-          document.getElementById("digitos").focus();
-          return false;
-        }else if (miCampoTexto2.length == 0 ) {
-          document.getElementById("numero").focus();
-          return false;
-        }else if (miCampoTexto != miCampoTexto2){
-          alert('Los campos de contraseña actual no coinciden');
-          document.getElementById("digitos").value = "";
-          document.getElementById("numero").value = "";
-          document.getElementById("digitos").focus();
+          document.getElementById("campoFolio").focus();
           return false;
         }
-        },
+      },
         success: function(data){
           $("#respuesta").html(data); // Mostrar la respuestas del script PHP.
         }

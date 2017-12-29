@@ -106,7 +106,7 @@
 		$db = new mysqli('localhost', 'root', '', 'recargasatc');
 		if ($db->connect_error) 
 		{
-			echo "<script language=\"JavaScript\">alert(\"Eror en la conexion de base de datos (x)\");</script>";
+			echo "<script language=\"JavaScript\">alert(\"Error en la conexion de base de datos (x)\");</script>";
 			die();
 		}
 		

@@ -35,7 +35,7 @@ $datosUsuario=$sesion->datosUsuario();
 	}
 	else
 	{
-		$valor = consultarNumeroCliente($numero);
+		$valor = consultarNumeroCliente($numero, $empresaID);
 	}
 	
 	if(empty($bandera) && $permisoID == 2)
@@ -75,7 +75,7 @@ $datosUsuario=$sesion->datosUsuario();
 	$compania = sacarCompania($numero);
 	
 	//Si la compañia es distinta a TELCEL compara que la fecha no haya pasado los 29 dias
-	if ($compania != "TELCEL")
+	if ($compania != "TELCEL" && $compania != 'TEST')
 	{
 		//Saca la fecha en la cual se registró el chip
 		$fechaInicial = sacarFecha($numero);
@@ -86,17 +86,29 @@ $datosUsuario=$sesion->datosUsuario();
 		$dias = dias_transcurridos($fechaInicial, $fechaFinal);
 		if ($dias > 29)
 		{
-			//echo "<script language=\"JavaScript\">alert(\"$permisoID El chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)\");";
-			//echo "location.href =\"./recarga\";</script>";
-			echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)!','error');";
-			echo "document.getElementById('digitos').value = '';";
-			echo "document.getElementById('numero').value = '';</script>";
-			exit;
+			//echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, el chip con el número $numero sobrepasa los 29 días de recarga inicial($dias)!','error');";
+			//echo "document.getElementById('digitos').value = '';";
+			//echo "document.getElementById('numero').value = '';</script>";
+			
+			//aqui se definio el monto para hacer las recargas de 30 si sobrepasan los 30 dias para cualquier compania ecepto telcel
+			//$monto = 30;
+			$idProducto = sacarIdProducto($compania, $monto);
+			//$idProducto = 100;
 		}
+		else
+		{
+			//$idProducto = 100;
+			$idProducto = sacarIdProducto($compania, $monto);
+		}
+	}
+	else
+	{
+		//$idProducto = 100;
+		$idProducto = sacarIdProducto($compania, $monto);
 	}
 	
 	//Saca el id del producto de la compañia de recarga
-	$idProducto = sacarIdProducto($compania, $monto);
+	//$idProducto = sacarIdProducto($compania, $monto);
 	
 	//id de prueba (QUITAR DESPUES DE PROBAR)
 	//$idProducto = 100;
@@ -123,11 +135,19 @@ $datosUsuario=$sesion->datosUsuario();
 		echo "document.getElementById('digitos').value = '';";
 		echo "document.getElementById('numero').value = '';</script>";
 	}
+	//Este if sirve para comparar los errores 501 y 5106
 	else
 	{
-		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, $resultado[1]. Error al activar $numero\!','error');";
+		if($resultado[1] == 'ERROR 501 TELEFONO NO VALIDO' || $resultado[1] == 'ERROR 5106. NUMERO TELEFONICO INVALIDO.'){
+		echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, $resultado[1]. Error al activar $numero\!, por favor marque al *611 para activar su numero','error');";
 		echo "document.getElementById('digitos').value = '';";
 		echo "document.getElementById('numero').value = '';</script>";
+		}
+		else{
+			echo "<script language=\"JavaScript\">swal('Error...','¡Estimado cliente, $resultado[1]. Error al activar $numero\!','error');";
+			echo "document.getElementById('digitos').value = '';";
+			echo "document.getElementById('numero').value = '';</script>";
+		}
 	}
 	} else {
     header("location:index");

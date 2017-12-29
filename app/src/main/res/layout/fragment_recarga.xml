@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context="com.example.javiersl.activachip.Fragments.RecargaFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/atc"/>
+
+    <EditText
+        android:id="@+id/edtNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número"
+        android:layout_marginTop="10dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edtRepetirNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Repetir Número"
+        android:inputType="number"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btRecarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recarga"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

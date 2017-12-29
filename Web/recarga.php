@@ -24,6 +24,35 @@ $datosUsuario=$sesion->datosUsuario();
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 
       <script>
+        $(function(){
+      var time = 0;
+      tsk="";
+      function connect(){
+        setTimeout(connect, 800);
+        if (time == 15) {
+          // if (miCampoTexto2) {
+          //   $.post("php/procesoRecarga",{data:miCampoTexto2}, function(data){
+          //     $("#respuesta").html(data);
+          //     time = 0;
+          //     clearTimeout(connect);
+          //   });
+          // }
+          $.post("php/procesoRecarga",{task:tsk}, function(data){
+            time = 0;
+            clearTimeout(connect);
+          });
+        }
+        $(".timer").html(time);
+        if (time == 40) {
+          $("#loader").hide();
+          swal('Error...','¡Estimado usuario, revise su conexion a Internet e intente realizar de nuevo la activación de su chip!','error');
+          time = 0;
+          clearTimeout(connect);
+        }
+        time++;
+      }
+      connect();
+    })
         function tel(e){
           key=e.keyCode || e.which;
           teclado=String.fromCharCode(key);
@@ -58,6 +87,7 @@ $datosUsuario=$sesion->datosUsuario();
 </head>
 
 <body>
+  <!-- <h1 class="timer"></h1> -->
   <div class="container">
       <ul id="nav" >
           <li class="active"><a href="">Inicio</a></li>
@@ -66,6 +96,7 @@ $datosUsuario=$sesion->datosUsuario();
             echo '<li ><a href="caducidad">Caducidad</a></li>';
           } ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
+            <li><a href="consultaFolio">Folio</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
 
@@ -81,7 +112,7 @@ $datosUsuario=$sesion->datosUsuario();
     <form id="formulario" method='post'  autocomplete="off">
 
       <input required id="digitos" name="digitos" maxlength="10" onkeypress = 'return tel(event)' type="text" placeholder="Número" autofocus/>
-      <input required id="numero"  onkeypress = 'return tel(event)' maxlength="10" name="numero" type="text" placeholder="Confirma el número"/>
+      <input required id="numero" onkeypress = 'return tel(event)' maxlength="10" name="numero" type="text" placeholder="Confirma el número"/>
 
       <!--<     -->
       

@@ -58,6 +58,7 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
             echo '<li class="active"><a href="">Caducidad</a></li>';
           	} ?>
             <li ><a href="cambioPassword">Cuenta</a></li>
+            <li><a href="consultaFolio">Folio</a></li>
             <ul id="nav-right">
               <li class="push-right"><a href="loginOut">Cerrar Sesion </a></li>
 
@@ -72,7 +73,7 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 		<p><br></p>
 		<h1>Reporte de Caducidad</h1>
 		<h4>
-			* El tiempo maximo de activación es de 29 dias habiles a partir de su compra (excepto chips "TELCEL").
+			* A partir de los 29 días hábiles desde su adquisición todas las activaciones se realizarán con un monto de $30.00 (excepto chips "TELCEL").
 		</h4>
 	</div>
 
@@ -84,8 +85,8 @@ $result = reporteCaducidad($usuarioID,$inicio,$TAMANO_PAGINA);
 	<br>
 	<?php $i=0; ?>
   <tr>
-    <th>Compañia</th>
-    <th data-th="Driver details"><span>Número</span></th>
+    <th>Número</th>
+    <th data-th="Driver details"><span>Compañia</span></th>
     <th>Fecha</th>
     <th>Dias Habiles</th>
   </tr>
